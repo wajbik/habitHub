@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      userLoggedIn: false,
+      userLoggedIn: true,
       store,
     }
   },
@@ -41,7 +41,7 @@ export default {
     supabase.auth.onAuthStateChange((_, session) => {
       store.setSession(session);
       //console.log(store.user)
-      this.userLoggedIn = (store.user != null);
+      //this.userLoggedIn = (store.user != null);
     });
   },
   computed: {
